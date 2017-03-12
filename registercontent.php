@@ -16,7 +16,7 @@ if(isset($_POST['signup']))
 	$secq=$_POST['secq'];
 	$ans=$_POST['answer'];
 	include "db/config.php";
-	$q=mysqli_query($connection,"insert into user_master values('".$name."','".$address."','".$dob."','".$userid."','".$sem."','".$tenthpercent."','".$twelevthpercent."','".$btechcgpa."','".$mob."','".$email."','".$pwd."','".$cpwd."','".$secq."','".$ans."')");
+	$q=mysql_query($connection,"insert into user_master values('".$name."','".$address."','".$dob."','".$userid."','".$sem."','".$tenthpercent."','".$twelevthpercent."','".$btechcgpa."','".$mob."','".$email."','".$pwd."','".$cpwd."','".$secq."','".$ans."')");
 	if($q)
 	{
 		header('location:success.php');
